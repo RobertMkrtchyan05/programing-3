@@ -1,6 +1,10 @@
 let LivingCreature = require('./LivingCreature')
 
 module.exports =class Grass extends LivingCreature {
+
+    constructor(x,y){
+        super(x,y);
+    }
     
     chooseCell(char) {
         var found = [];
@@ -16,9 +20,10 @@ module.exports =class Grass extends LivingCreature {
         return found;
     }
     mul() {
+        console.log("test");
         this.multiplay++;
         let found = this.chooseCell(0);
-        let exact = random(found);
+        let exact =  found[Math.floor(Math.random() * found.length)];
         if (exact && this.multiplay > 3) {
             let x = exact[0];
             let y = exact[1];

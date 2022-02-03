@@ -1,6 +1,6 @@
 let LivingCreature = require('./LivingCreature') 
 
-module.exports =class Eater  extends LivingCreature {
+module.exports = class Eater  extends LivingCreature {
 
 
     constructor(x, y) {
@@ -33,7 +33,7 @@ module.exports =class Eater  extends LivingCreature {
     mul() {
 
         let found = this.chooseCell(0);
-        let exact = random(found)
+        let exact =  found[Math.floor(Math.random() * found.length)];
 
         if (exact && this.energy > 8) {
             let x = exact[0];
@@ -52,8 +52,7 @@ module.exports =class Eater  extends LivingCreature {
     }
     eat() {
         let found = this.chooseCell(1, 2, 6, 5);
-        let exact = random(found)
-
+        let exact =  found[Math.floor(Math.random() * found.length)];
 
         if (exact) {
             this.energy += 4;
@@ -112,8 +111,7 @@ module.exports =class Eater  extends LivingCreature {
     }
     move() {
         let found = this.chooseCell(0);
-
-        let exact = random(found)
+        let exact =  found[Math.floor(Math.random() * found.length)];
 
 
         if (exact) {

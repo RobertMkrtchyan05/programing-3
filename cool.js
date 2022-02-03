@@ -4,8 +4,8 @@ let LivingCreature = require('./LivingCreature')
 module.exports =class Cool extends LivingCreature{
     constructor(x, y) {
        
-        this.energy = 20;
         super(x,y);
+        this.energy = 20;
     }
 
 
@@ -33,7 +33,7 @@ module.exports =class Cool extends LivingCreature{
     mul() {
 
         let found = this.chooseCell(1);
-        let exact = random(found);
+        let exact =  found[Math.floor(Math.random() * found.length)];
         for (let i = 0; i < found.length; i++) {
             let x = exact[0];
             let y = exact[1];

@@ -99,7 +99,7 @@ module.exports =class Bird extends LivingCreature{
     mul() {
 
         let found = this.chooseCell(0);
-        let exact = random(found)
+        let exact =  found[Math.floor(Math.random() * found.length)];
 
         if (exact && this.energy > 8) {
             let x = exact[0];
@@ -121,8 +121,8 @@ module.exports =class Bird extends LivingCreature{
 
         if (this.energy == 10) {
 
-            let found = this.chooseCell(3, 2);
-            let exact = random(found)
+             let found = this.chooseCell(3,2);
+             let exact =  found[Math.floor(Math.random() * found.length)];
 
 
             if (exact) {
