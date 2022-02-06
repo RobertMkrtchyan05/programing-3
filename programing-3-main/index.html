@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css.css">
+ </head>
+ <body>
+    <h1><span>Programming </span>III<span> Gyumri</span></h1>
+    <h1><span>Teacher </span><span>Karlen</span></h1>
+    <h1><span>performer </span><span>Robert Mkrtchyan</span></h1>
+    
+    <div class="desc__block">
+        <div class="desc__row">
+            <div class="rows">
+                <div class="desc__num" style="background-color: green">Grass</div>
+                <p class="desc__text">Կանաչը խոտն է, որը բազմանում է N ցիկլը մեկ,մահանում է երբ նրան ուտում է խոտակերը, կամ 
+                    երբ նրան ուտում է գիշատիչը</p>
+            </div>
+        </div>
+        <div class="desc__row">
+            <div class="rows">
+                <div class="desc__num" style="background-color: yellow">GrassEater</div>
+                <p class="desc__text">Դեղինը խոտակերն է, որը բազմանում է N հատ խոտ ուտելուց հետո և մահանում է N հատ չուտելուց հետո, կամ
+                    երբ նրան ուտում է գիշատիչը,  կամ երբ   ուտում է թունաորված խոտ</p>
+            </div>
+        </div>
+        <div class="desc__row">
+            <div class="rows">
+                <div class="desc__num" style="background-color: red">Eater</div>
+                <p class="desc__text">կարմիրը  գիշատիչն է, որը բազմանում է N հատ խոտ կամ  խոտակեր ուտելուց հետո և մահանում է N հատ չուտելուց հետո, կամ
+                    երբ նրան ուտում է թրչունը, կամ երբ   ուտում է թունաորված խոտ :</p>
+            </div>
+        </div>
+        <div class="desc__row">
+            <div class="rows">
+                <div class="desc__num" style="background-color: #e68438;">Bird</div>
+                <p class="desc__text">մաշկագույնը թրչուն է, որը բազմանում է N հատ գիշատիչն կամ  խոտակեր ուտելուց հետո և չի մահանում :</p>
+            </div>
+        </div>
+        <div class="desc__row">
+            <div class="rows">
+                <div class="desc__num" style="background-color: black">Cool</div>
+                <p class="desc__text">Սեվը  ծաղիկ  է, որը պաշտպանում է խոտը դրանք թույնով պատելով և մահանում է երբ նրան ուտում է գիշատիչը:</p>
+            </div>
+        </div>
+        <div class="desc__row">
+            <div class="rows">
+                <div class="desc__num" style="background-color: #0a0e41">Poison</div>
+                <p class="desc__text">կապույտը թույնն է, որը պաշտպանում է խոտը եվ մահանում է երբ նրան ուտում է գիշատիչը  կամ երբ նրան ուտում է խոտակերը: </p>
+            </div>
+        </div>
+    </div>
+    <div class="all__btns">
+        <button onclick="AddGrass()" class="add__btn" style="background-color: green">Grass +</button>
+        <button onclick="AddgrassEater()" class="add__btn" style="background-color: yellow">GrassEater +</button>
+        <button onclick="Eaters()" class="add__btn" style="background-color: red">Eater +</button>
+        <button  onclick="Birds()" class="add__btn" style="background-color: #e68438;">Bird +</button>
+        <button onclick="Cools()" class="add__btn" style="background-color: #0a0e41">Cool +</button>
+        <button onclick="Kill()" class="add__btn" style="background-color: #0a0e41">kill</button>
+
+        
+    </div>
+    <div class="exanak__btns">
+        <button onclick="Spring()" class="btn__exanak" style="background-color: darkgreen">Spring</button>
+        <button onclick="Summer()" class="btn__exanak" style="background-color: #79a83b">Summer</button>
+        <button onclick="Autumn()" class="btn__exanak" style="background-color: #fc4903">Autumn</button>
+        <button onclick="Winter()" class="btn__exanak" style="background-color: #ffffff">Winter</button>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="skript.js"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Yellowtail&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    min-height: 100vh;
+}
+
+h1{
+    width: max-content;
+    margin: 0 auto;
+    color: #484848;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer
+}
+h1 span{
+    transition: .5s linear
+}
+h1:hover span:nth-child(1){
+    margin-right: 5px
+}
+h1:hover span:nth-child(1):after{
+    content: "'";
+}
+h1:hover span:nth-child(2){
+    margin-left: 30px
+}
+h1:hover span{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff;
+}
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    animation: my--anim 2s linear 2s infinite alternate;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Yellowtail', cursive;
+}
+
+th{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 25px;
+}
+.desc__block{
+    max-width: 100%;
+    width: 1200px;
+    margin: 100px auto 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.desc__row{
+    position: relative;
+    width: 200px;
+    margin-bottom: 20px;
+    height: 500px;
+    overflow: hidden;
+}
+.rows{
+    height: 50px;
+    border-radius: 35px 0 35px 0;
+    transition: all 0.3s;
+}
+.desc__num{
+    border: 3px solid white;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-radius: 30px 30px 30px 30px;
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: white;
+}
+.desc__text{
+    border: 3px solid white;
+    border-radius: 35px 35px 35px 35px;
+
+    cursor: default;
+    position: absolute;
+    top: -100%;
+    padding: 20px;
+    color: white;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.rows:hover .desc__text{
+    top: 50px;
+    opacity: 1;
+}
+.rows:hover{
+    height: 300px;
+}
+.red {
+    color: red
+}
+.blue {
+    color: blue
+}
+.orange {
+    color: orange
+}
+.all__btns{
+    display: flex;
+    justify-content: center;
+}
+.add__btn{
+    font-family: 'Merriweather Sans', sans-serif;
+    margin: 50px 25px 150px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    color: white;
+    display: block;
+    height: fit-content;
+    transition: all 0.5s;
+    
+}
+.add__btn:hover{
+    box-shadow: 0 0 40px 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1.5)rotate(10deg);
+    animation: rotate-scale-down-diag-2 0.7s linear both;
+}
+.exanak__btns{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.exanak__btns .btn__exanak{
+    font-family: 'Merriweather Sans', sans-serif;
+    margin: 25px 100px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    color: black;
+    display: block;
+    transition: all 0.3s;
+}
+.btn__exanak:hover{
+    box-shadow: 0 0 40px 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1.5)rotate(-10deg);
+    animation: rotate-diagonal-br 0.4s linear both;
+}
+
+@keyframes rotate-scale-down-diag-2 {
+    0% {
+      -webkit-transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+              transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+    }
+    50% {
+      -webkit-transform: scale(0.5) rotate3d(-1, 1, 0, 180deg);
+              transform: scale(0.5) rotate3d(-1, 1, 0, 180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotate3d(-1, 1, 0, 360deg);
+              transform: scale(1) rotate3d(-1, 1, 0, 360deg);
+    }
+  }
+  @keyframes rotate-diagonal-br {
+    0% {
+      -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+              transform: rotate3d(-1, 1, 0, 0deg);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+    }
+    50% {
+      -webkit-transform: rotate3d(-1, 1, 0, -180deg);
+              transform: rotate3d(-1, 1, 0, -180deg);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+    }
+    100% {
+      -webkit-transform: rotate3d(-1, 1, 0, -360deg);
+              transform: rotate3d(-1, 1, 0, -360deg);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+    }
+  }
+  
